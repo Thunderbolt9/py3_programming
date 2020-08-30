@@ -24,22 +24,13 @@ num_lines=len(char_y)
 print(num_lines)
 file.close()
 
+''' Q-4. Assign the first 30 characters of school_prompt.txt as a string to the variable beginning_chars'''
 
-
-''' Q-4. Write code that counts the number of words in sentence that contain either an “a” or an “e”. Store the result in the variable num_a_or_e.
-Note 1: be sure to not double-count words that contain both an a and an e.
-HINT 1: Use the in operator.
-HINT 2: You can either use or or elif.
-Hard-coded answers will receive no credit.'''
-
-sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
-words = sentence.split(" ")
-num_a_or_e = 0
-for i in words:
-    if (('a' in i) or ('e' in i)) :
-        num_a_or_e+=1
-
-print(num_a_or_e)
+file=open("school_prompt.txt","r")
+char_y=file.read()
+beginning_chars=str(char_y[:30])
+print(beginning_chars)
+file.close()
 
 ''' Q-5. Write code that will count the number of vowels in the sentence s and assign the result to the variable num_vowels. For this problem,
 vowels are only a, e, i, o, and u. Hint: use the in operator with vowels.'''
