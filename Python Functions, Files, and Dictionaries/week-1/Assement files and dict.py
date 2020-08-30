@@ -6,23 +6,15 @@ with open("travel_plans.txt","r") as file:
     num = len(file_char)
     print(num)
     file.close()
-        
-  
-print(num_rainy_months)
+    
+''' Q-2. We have provided a file called emotion_words.txt that contains lines of words that describe emotions. 
+Find the total number of words in the file and assign this value to the variable num_words.'''
 
-''' Q-2. The variable sentence stores a string. Write code to determine how many words in sentence start and end with
-the same letter, including one-letter words. Store the result in the variable same_letter_count.
-Hard-coded answers will receive no credit.'''
-
-sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
-lst = sentence.split(" ")
-same_letter_count = 0
-for i in lst:
-    if i[0] == i[-1]:
-        same_letter_count+=1
-
-        
-print(same_letter_count)
+num_words=0
+with open("emotion_words.txt","r") as file:
+    for words in file:
+        num_words+=len(words.split())
+    file.close()
 
 ''' Q-3. Write code to count the number of strings in list items that have the character w in it. Assign that number to the variable acc_num.
 HINT 1: Use the accumulation pattern!
