@@ -32,16 +32,31 @@ beginning_chars=str(char_y[:30])
 print(beginning_chars)
 file.close()
 
-''' Q-5. Write code that will count the number of vowels in the sentence s and assign the result to the variable num_vowels. For this problem,
-vowels are only a, e, i, o, and u. Hint: use the in operator with vowels.'''
+''' Q-5. Challenge: Using the file school_prompt.txt, assign the third word of every line to a list called three.'''
 
-s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
-vowels = ['a','e','i','o','u']
-s = list(s)
-num_vowels = 0
-for i in s:
-    for j in i:
-        if j in vowels:
-            num_vowels+=1
+three = []
 
-print(num_vowels)    
+with open('school_prompt.txt', 'r') as f:
+    three = [line.split()[2] for line in f]
+    print(three)
+
+''' Q-6 Challenge: Create a list called emotions that contains the first word of every line in emotion_words.txt.'''
+emotions = []
+
+with open('emotion_words.txt', 'r') as f:
+    emotions = [line.split()[0] for line in f]
+    print(emotions)
+ 
+'''Q-7 Assign the first 33 characters from the textfile, travel_plans.txt to the variable first_chars.'''
+
+f = open('travel_plans.txt', 'r')
+first_chars = f.read(33)
+print(first_chars)
+
+'''Q-8 Challenge: Using the file school_prompt.txt, if the character ‘p’ is in a word, then add the word to a list called p_words.'''
+
+fileref = open('school_prompt.txt', 'r')
+words = fileref.read().split()
+p_words = [word for word in words if 'p' in word]
+
+
