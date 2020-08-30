@@ -16,18 +16,15 @@ with open("emotion_words.txt","r") as file:
         num_words+=len(words.split())
     file.close()
 
-''' Q-3. Write code to count the number of strings in list items that have the character w in it. Assign that number to the variable acc_num.
-HINT 1: Use the accumulation pattern!
-HINT 2: the in operator checks whether a substring is present in a string.
-Hard-coded answers will receive no credit.'''
+''' Q-3. Assign to the variable num_lines the number of lines in the file school_prompt.txt.'''
 
-items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
-acc_num = 0
-for i in items:
-    if 'w' in i:
-        acc_num+=1
+file=open("school_prompt.txt","r")
+char_y=file.readlines()
+num_lines=len(char_y)
+print(num_lines)
+file.close()
 
-print(acc_num)
+
 
 ''' Q-4. Write code that counts the number of words in sentence that contain either an “a” or an “e”. Store the result in the variable num_a_or_e.
 Note 1: be sure to not double-count words that contain both an a and an e.
